@@ -16,7 +16,10 @@ const counterReducer = (state = initialState, action) => {
       return {
         value: state.value + 1
       }
-
+    case types.ASYNC_INCREMENT.SUCCESS:
+      return {
+        value: action.value
+      }
     default:
       return state;
   }

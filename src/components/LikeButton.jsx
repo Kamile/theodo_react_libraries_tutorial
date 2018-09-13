@@ -1,15 +1,21 @@
 import React from "react";
 import { connect } from "react-redux";
-import { incrementCounter } from "../redux/counter.actions";
+import { incrementCounter, asyncIncrementCounter } from "../redux/counter.actions";
+
+// class LikeButton extends React.PureComponent {
+//   render() {
+//     return <button onClick={this.props.incrementCounter}>Like!</button>;
+//   }
+// }
 
 class LikeButton extends React.PureComponent {
   render() {
-    return <button onClick={this.props.incrementCounter}>Like!</button>;
+    return <button onClick={this.props.asyncIncrementCounter}>Like!</button>;
   }
 }
 
 const mapDispatchToProps = {
-  incrementCounter
+  asyncIncrementCounter
 };
 
 const LikeButtonWrapper = connect(
