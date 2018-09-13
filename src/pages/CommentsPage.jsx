@@ -7,6 +7,7 @@ class CommentsPage extends React.PureComponent {
         <PageTemplate>
             <h2>Comments</h2>
             <input type="textarea"/>
+            <button>Submit</button>
         </PageTemplate>
       );
     }
