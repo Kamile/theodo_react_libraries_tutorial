@@ -1,21 +1,18 @@
 import React from "react";
 import PageTemplate from "./templates/PageTemplate";
-import uuid from 'uuid';
+import { connect } from "react-redux";
+import addComment from '../redux/comments.actions';
 
 class CommentsPage extends React.PureComponent {
-    state = {
-        comments: [
-            { text: 'Dummy Content 1', id: uuid() },
-            { text: 'Dummy Content 2', id: uuid() },
-        ],
-        commentText: ''
+    constructor(props) {
+        super(props);
+        this.state = {
+            commentText: ''
+        };
     }
     onCommentSubmit = (e) => {
         const commentText = this.state.commentText;
-        this.setState(state => (
-            {
-             comments: [...this.state.comments, { text: commentText, id: uuid()}]
-            }))
+        this.props.addComment(commentText);
         this.setState(state => ({ commentText: '' }))
     }
     handleChange = (e) => {
@@ -33,7 +30,7 @@ class CommentsPage extends React.PureComponent {
             />
             <button onClick={this.onCommentSubmit}>Submit</button>
             <ul>
-                {this.state.comments.map((comment) => {
+                {this.props.comments.map((comment) => {
                     return  <li key={comment.id}>{comment.text}</li>;
                 })}
             </ul>
@@ -42,4 +39,11 @@ class CommentsPage extends React.PureComponent {
     }
 }
 
-export default CommentsPage
+const mapStateToProps = (state) => ({
+    comments: state.commentStore.comments
+})
+const mapDispatchToProps = (dispatch) => ({
+    addComment: (commentText) => dispatch(addComment(commentText)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(CommentsPage)
