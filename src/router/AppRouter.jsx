@@ -6,6 +6,7 @@ import ReduxPage from "../pages/ReduxPage";
 import SagaAxiosPage from "../pages/SagaAxiosPage";
 import IntroPage from "../pages/IntroPage";
 import StyledComponentPage from "../pages/StyledComponentPage";
+import CommentsPage from "../pages/CommentsPage";
 
 class Page extends React.PureComponent {
   render() {
@@ -17,6 +18,7 @@ class Page extends React.PureComponent {
           <Route path="/redux" component={ReduxPage} />
           <Route path="/sagaaxios" component={SagaAxiosPage} />
           <Route path="/styledcomponents" component={StyledComponentPage} />
+          <Route path="/comments" component={CommentsPage} />
         </Switch>
       </BrowserRouter>
     );
