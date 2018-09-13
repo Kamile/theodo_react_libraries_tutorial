@@ -4,7 +4,7 @@
 
 This article was written to help onboard our new developers to the React libraries we use the most. By the end of this article you should have all you need to be able to add a new page, and add a new feature including styling and a call to a backend (Node in this case).
 
-I've written a short app here https://github.com/TomOConnor95/theodo_react_libraries_tutorial. You can clone it here to have a look at it as you go through the article git@github.com:TomOConnor95/theodo_react_libraries_tutorial.git or follow along without it.
+I've written a short app here **https://github.com/TomOConnor95/theodo_react_libraries_tutorial**. You can clone it here to have a look at it as you go through the article **git@github.com:TomOConnor95/theodo_react_libraries_tutorial.git** or follow along without it.
 
 Before you start you should be familiar with React. I suggest https://reactjs.org/tutorial/tutorial.html tutorial - i am not teaching you react, sorry!
 
@@ -82,7 +82,7 @@ Docs: https://www.styled-components.com/docs
 
 Source code: https://github.com/styled-components/styled-components
 
-## 2. React Router
+## 2. React Router
 
 This is a really simple libary that conditionally renders components based on the url:
 
