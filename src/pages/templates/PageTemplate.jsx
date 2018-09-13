@@ -73,6 +73,7 @@ class PageTemplate extends React.PureComponent {
             <SidebarNavLink to="/sagaaxios">
               Redux Saga and Axios
             </SidebarNavLink>
+            <SidebarNavLink to="/comments">Comments</SidebarNavLink>
           </Sidebar>
           <Content>{this.props.children}</Content>
         </Main>
