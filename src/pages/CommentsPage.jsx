@@ -7,14 +7,31 @@ class CommentsPage extends React.PureComponent {
         comments: [
             { text: 'Dummy Content 1', id: uuid() },
             { text: 'Dummy Content 2', id: uuid() },
-        ]
+        ],
+        commentText: 'asdsa'
+    }
+    onCommentSubmit = (e) => {
+        const commentText = this.state.commentText;
+        this.setState(state => (
+            {
+             comments: [...this.state.comments, { text: commentText, id: uuid()}]
+            }))
+        this.setState(state => ({ commentText: '' }))
+    }
+    handleChange = (e) => {
+        const value = e.target.value;
+        this.setState(state => ({ commentText: value }))
     }
     render() {
       return (
         <PageTemplate>
             <h2>Comments</h2>
-            <input type="textarea"/>
-            <button>Submit</button>
+            <input 
+                type="text" 
+                value={this.state.commentText} 
+                onChange={this.handleChange}
+            />
+            <button onClick={this.onCommentSubmit}>Submit</button>
             <ul>
                 {this.state.comments.map((comment) => {
                     return  <li key={comment.id}>{comment.text}</li>;
@@ -24,4 +41,5 @@ class CommentsPage extends React.PureComponent {
       );
     }
 }
+
 export default CommentsPage
