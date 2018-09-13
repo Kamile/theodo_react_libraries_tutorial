@@ -8,7 +8,7 @@ class CommentsPage extends React.PureComponent {
             { text: 'Dummy Content 1', id: uuid() },
             { text: 'Dummy Content 2', id: uuid() },
         ],
-        commentText: 'asdsa'
+        commentText: ''
     }
     onCommentSubmit = (e) => {
         const commentText = this.state.commentText;
