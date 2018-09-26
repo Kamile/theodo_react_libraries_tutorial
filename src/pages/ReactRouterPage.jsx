@@ -1,39 +1,29 @@
 import React from "react";
 
-import LikeComponent from "../components/LikeComponent";
+import TextBlock from "../components/TextComponent";
 import PageTemplate from "./templates/PageTemplate";
+import CodeBlock from "../components/CodeBlock";
 
 class ReactRouterPage extends React.PureComponent {
   render() {
     return (
       <PageTemplate>
-        <h2>React Router Dom</h2>
-        <a
-          href="https://reacttraining.com/react-router/web/guides/philosophy"
-          target="_blank"
-        >
-          Docs
-        </a>
-        <p>
-          Redux Sagas - side effects for your redux actions. Lorem ipsum dolor
-          sit amet consectetur adipisicing elit. Reprehenderit nam porro aliquid
-          tenetur quasi. Recusandae similique quae quo quibusdam dignissimos
-          magnam, nesciunt inventore culpa sequi blanditiis dolor temporibus ex
-          nobis!
-        </p>
-        <p>
-          Axios - https requests made easy. Lorem, ipsum dolor sit amet
-          consectetur adipisicing elit. Nostrum delectus libero maiores,
-          quibusdam nam nulla ullam odio ab quod recusandae incidunt expedita
-          doloremque nobis natus eaque in impedit optio officia.
-        </p>
-        <p>
-          Styled-components - ACTUAL css in your react components. Lorem ipsum
-          dolor sit amet consectetur adipisicing elit. Non modi similique iusto
-          dolor repellendus ipsam quis ad, inventore officia doloremque. Magnam
-          a veniam at debitis neque autem veritatis laborum? Rem.
-        </p>
-        <LikeComponent />
+        <h2>React Router DOM</h2>
+        <TextBlock>
+          React Router is an API that allows us to define dynamics routes, where
+          routing takes place as the app is rendering. In a React Router,
+          everything is a component. In the <CodeBlock>AppRouter</CodeBlock>,
+          define the Routes with the <CodeBlock>path</CodeBlock> as appended to
+          the URL together with the <CodeBlock>component</CodeBlock> that should
+          be rendered. The API provides components such as{" "}
+          <CodeBlock>NavLink</CodeBlock> and <CodeBlock>Link</CodeBlock> that
+          then allow the path to be defined using <CodeBlock>to</CodeBlock>.
+          Read more about React Router in the{" "}
+          <a href="https://reacttraining.com/react-router/web/guides/philosophy">
+            documentation
+          </a>
+          .
+        </TextBlock>
       </PageTemplate>
     );
   }

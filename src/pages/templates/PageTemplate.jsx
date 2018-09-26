@@ -28,7 +28,7 @@ const Main = styled.div`
 const Sidebar = styled.div`
   height: 100%;
   min-width: 250px;
-  background: #3aafa9;
+  background: #beb;
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -48,7 +48,6 @@ const SidebarNavLink = styled(NavLink)`
 `;
 
 const Content = styled.div`
-  background: #def2f1;
   flex: 1;
   padding: 16px;
 `;

@@ -18,11 +18,13 @@ The libraries we will be having a look at are:
 
 To set up the project:
 
-`git clone link`
+`git clone [repo]`
 
-`yarn dev-server`
+`yarn install`
 
-`node server.js`
+`node server.js // to start the server`
+
+`yarn start // to start the web app`
 
 ## 1. Styling your app with styled-components
 

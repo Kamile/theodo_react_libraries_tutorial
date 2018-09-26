@@ -5,7 +5,7 @@ import { selectValue } from "../redux/counter.selectors";
 
 class LikeDisplay extends React.PureComponent {
   render() {
-    return <div>{this.props.value} likes!</div>;
+    return <div>{this.props.value} likes.</div>;
   }
 }
 

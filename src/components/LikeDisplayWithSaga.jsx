@@ -9,7 +9,7 @@ class LikeDisplay extends React.PureComponent {
     this.props.getValue();
   }
   render() {
-    return <div>{this.props.value} likes!</div>;
+    return <div>{this.props.value} likes.</div>;
   }
 }
 

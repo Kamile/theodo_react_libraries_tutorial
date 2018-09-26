@@ -1,46 +1,48 @@
 import React from "react";
 
 import PageTemplate from "./templates/PageTemplate";
-
-import LikeButton from "../components/LikeButton";
-import LikeDisplay from "../components/LikeDisplay";
+import TextBlock from "../components/TextComponent";
+import LikeComponent from "../components/LikeComponent";
 
 class ReduxPage extends React.PureComponent {
   render() {
     return (
       <PageTemplate>
         <h2>Redux</h2>
-        <p>
-          Redux - Use actions and reducers manage global states and events!
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad qui id,
-          fuga, natus architecto cupiditate similique enim exercitationem
-          aliquam dolores labore voluptate quia provident voluptas corrupti est
-          ullam perspiciatis rerum.
-        </p>
-        <LikeButton />
-        <p>
-          Redux Sagas - side effects for your redux actions. Lorem ipsum dolor
-          sit amet consectetur adipisicing elit. Reprehenderit nam porro aliquid
-          tenetur quasi. Recusandae similique quae quo quibusdam dignissimos
-          magnam, nesciunt inventore culpa sequi blanditiis dolor temporibus ex
-          nobis!
-        </p>
-        <LikeButton />
-        <p>
-          Axios - https requests made easy. Lorem, ipsum dolor sit amet
-          consectetur adipisicing elit. Nostrum delectus libero maiores,
-          quibusdam nam nulla ullam odio ab quod recusandae incidunt expedita
-          doloremque nobis natus eaque in impedit optio officia.
-        </p>
-        <LikeButton />
-        <p>
-          Styled-components - ACTUAL css in your react components. Lorem ipsum
-          dolor sit amet consectetur adipisicing elit. Non modi similique iusto
-          dolor repellendus ipsam quis ad, inventore officia doloremque. Magnam
-          a veniam at debitis neque autem veritatis laborum? Rem.
-        </p>
-        <LikeButton />
-        <LikeDisplay />
+        <h4>
+          Redux - Use actions and reducers manage global states and events.
+        </h4>
+        <TextBlock>
+          Redux imposes restrictions on how and when updates can happen to try
+          to make state mutations predictable.
+        </TextBlock>
+        <TextBlock>
+          An object is defined without setters to prevent arbitrary changes.
+        </TextBlock>
+        <TextBlock>
+          An action is needed to change something in the state.
+        </TextBlock>
+        <TextBlock>
+          A function called a <em>reducer</em> is used to tie state and actions
+          together. It takes state and action and returns the next state. There
+          are 3 principles:
+        </TextBlock>
+        <ul>
+          <li>All state is stored in an object tree in a single store.</li>
+          <li>
+            State is read-only - use actions (objects) to describe what
+            happened. Actions are serialised and centralised, allowing for easy
+            logging and debugging.
+          </li>
+          <li>
+            Use pure reducers to specify how actions transform state tree.
+            Return new state objects instead of mutating the previous state.
+          </li>
+        </ul>
+        <TextBlock>
+          Since reducers are just functions, they can be reused.
+        </TextBlock>
+        <LikeComponent />
       </PageTemplate>
     );
   }
