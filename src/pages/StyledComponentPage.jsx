@@ -5,6 +5,7 @@ import PageTemplate from "./templates/PageTemplate";
 
 import TextBlock from "../components/TextComponent";
 import CodeBlock from "../components/CodeBlock";
+import LikeComponent from "../components/LikeComponent";
 
 const ArticleTitle = styled.h2`
   text-align: center;
@@ -52,6 +53,13 @@ class StyledComponentPage extends React.PureComponent {
           blocks are extended from the style defined for the blue block. Only
           the colour changes - less redundant code :-)
         </TextBlock>
+        <TextBlock>
+          The following buttons form a 'Like' component. State is stored in the
+          component and the value is incremented and decremented using the
+          Component's methods. Note how state does not persist when the page is
+          reloaded/ navigated away from. The state is local to the Component.
+        </TextBlock>
+        <LikeComponent />
       </PageTemplate>
     );
   }

@@ -2,7 +2,8 @@ import React from "react";
 
 import PageTemplate from "./templates/PageTemplate";
 import TextBlock from "../components/TextComponent";
-import LikeComponent from "../components/LikeComponent";
+import LikeButton from "../components/LikeButton";
+import LikeDisplay from "../components/LikeDisplay";
 
 class ReduxPage extends React.PureComponent {
   render() {
@@ -39,10 +40,9 @@ class ReduxPage extends React.PureComponent {
             Return new state objects instead of mutating the previous state.
           </li>
         </ul>
-        <TextBlock>
-          Since reducers are just functions, they can be reused.
-        </TextBlock>
-        <LikeComponent />
+        <TextBlock>Here the action is increment.</TextBlock>
+        <LikeButton />
+        <LikeDisplay />
       </PageTemplate>
     );
   }
