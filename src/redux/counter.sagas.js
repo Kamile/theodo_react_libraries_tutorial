@@ -4,7 +4,7 @@ import {
   getValueSuccess,
   incrementValueSuccess
 } from "../actions/counter";
-import { getValue, incrementValue } from "../services/counter.service";
+import { getValue, incrementValue } from "../services/counter";
 
 function* getValueSaga() {
   try {

@@ -7,6 +7,7 @@ import { selectValue } from "../redux/counter.selectors";
 class LikeDisplay extends React.PureComponent {
   componentDidMount() {
     this.props.getValue();
+    console.log("Mounted component");
   }
   render() {
     return <div>{this.props.value} likes.</div>;

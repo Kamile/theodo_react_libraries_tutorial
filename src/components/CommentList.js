@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Comment from "./Comment";
 
 const CommentList = ({ comments, likeComment }) => (
-  <ul>
+  <div>
     {comments.map(comment => (
       <Comment
         key={comment.id}
@@ -11,7 +11,7 @@ const CommentList = ({ comments, likeComment }) => (
         onClick={() => likeComment(comment.id)}
       />
     ))}
-  </ul>
+  </div>
 );
 
 CommentList.propTypes = {
