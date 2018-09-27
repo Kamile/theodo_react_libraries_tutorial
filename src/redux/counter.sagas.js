@@ -3,7 +3,7 @@ import {
   types,
   getValueSuccess,
   incrementValueSuccess
-} from "./counter.actions";
+} from "../actions/counter";
 import { getValue, incrementValue } from "../services/counter.service";
 
 function* getValueSaga() {

@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { asyncIncrementCounter } from "../redux/counter.actions";
+import { asyncIncrementCounter } from "../actions/counter";
 
 class LikeButton extends React.PureComponent {
   render() {

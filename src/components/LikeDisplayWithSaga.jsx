@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { getValue } from "../redux/counter.actions";
+import { getValue } from "../actions/counter";
 import { selectValue } from "../redux/counter.selectors";
 
 class LikeDisplay extends React.PureComponent {
